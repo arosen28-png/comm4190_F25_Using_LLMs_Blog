@@ -4,14 +4,42 @@
     "href": "index.html",
     "title": "Alex Rosen’s Explorations with LLMs",
     "section": "",
-    "text": "```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "Vibe Coding: Finding Flow in Software Development\n\n\n\n\n\n\n\n\nSep 3, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/002_test_test/test_test.html",
     "href": "posts/002_test_test/test_test.html",
-    "title": "Alex Rosen's Explorations with LLMs",
+    "title": "Vibe Coding: Finding Flow in Software Development",
     "section": "",
-    "text": "---\ntitle: \"Emma's Test\"\ndescription: \"Testing Blogging\" \nauthor: \"Emma\"\ndate: \"2/1/2025\"\ncategories:\n  - LLMs\n  - Learning\n---"
+    "text": "When most people think about programming, they picture solving technical problems or shipping features. But there’s another side to coding — one that feels less like work and more like entering a state of flow. This is what I like to call vibe coding.\n\n\n\nVibe coding isn’t about deadlines, bug tickets, or sprint goals. It’s about writing code for the sake of focus, creativity, and momentum.\nIn practice, this might mean: - Putting on music that helps you focus\n- Cleaning up your environment and editor so distractions disappear\n- Building something small, experimental, or even silly — just to see where it goes\nIt’s the programming equivalent of sketching in a notebook: low-pressure, creative, and surprisingly rewarding.\n\n\n\n\nModern development is often fast-paced and outcome-driven. While productivity is important, it can also lead to burnout if every coding session is framed around efficiency. Vibe coding offers a counterbalance — a reminder that programming can be playful and exploratory.\nBenefits include: - Improved creativity: experimenting without constraints often leads to unexpected ideas.\n- Sustained motivation: coding becomes something you look forward to, not just a task list.\n- Skill growth: practice in a low-stakes environment helps sharpen intuition and technique.\n\n\n\n\nIf you want to bring vibe coding into your own workflow, here are some ways to start: 1. Curate a playlist: lo-fi beats, ambient soundtracks, or anything that keeps you engaged without distraction.\n2. Set the stage: dim lights, a clear desk, maybe even a favorite drink nearby.\n3. Pick a fun project: it could be a visualization of your Spotify history, a quirky bot, or a small tool only you will ever use.\n4. Let go of outcomes: the point isn’t to finish — it’s to explore.\n\n\n\n\nCoding doesn’t always have to be serious. Sometimes the best way to unlock creativity, reduce stress, and rediscover joy in programming is to let yourself vibe with the process.\nSo next time you sit down to write code, try setting aside the pressure of productivity. Put on some music, open a blank file, and let the vibes lead you — you might be surprised by what you create."
+  },
+  {
+    "objectID": "posts/002_test_test/test_test.html#what-is-vibe-coding",
+    "href": "posts/002_test_test/test_test.html#what-is-vibe-coding",
+    "title": "Vibe Coding: Finding Flow in Software Development",
+    "section": "",
+    "text": "Vibe coding isn’t about deadlines, bug tickets, or sprint goals. It’s about writing code for the sake of focus, creativity, and momentum.\nIn practice, this might mean: - Putting on music that helps you focus\n- Cleaning up your environment and editor so distractions disappear\n- Building something small, experimental, or even silly — just to see where it goes\nIt’s the programming equivalent of sketching in a notebook: low-pressure, creative, and surprisingly rewarding."
+  },
+  {
+    "objectID": "posts/002_test_test/test_test.html#why-vibe-coding-matters",
+    "href": "posts/002_test_test/test_test.html#why-vibe-coding-matters",
+    "title": "Vibe Coding: Finding Flow in Software Development",
+    "section": "",
+    "text": "Modern development is often fast-paced and outcome-driven. While productivity is important, it can also lead to burnout if every coding session is framed around efficiency. Vibe coding offers a counterbalance — a reminder that programming can be playful and exploratory.\nBenefits include: - Improved creativity: experimenting without constraints often leads to unexpected ideas.\n- Sustained motivation: coding becomes something you look forward to, not just a task list.\n- Skill growth: practice in a low-stakes environment helps sharpen intuition and technique."
+  },
+  {
+    "objectID": "posts/002_test_test/test_test.html#how-to-try-it-yourself",
+    "href": "posts/002_test_test/test_test.html#how-to-try-it-yourself",
+    "title": "Vibe Coding: Finding Flow in Software Development",
+    "section": "",
+    "text": "If you want to bring vibe coding into your own workflow, here are some ways to start: 1. Curate a playlist: lo-fi beats, ambient soundtracks, or anything that keeps you engaged without distraction.\n2. Set the stage: dim lights, a clear desk, maybe even a favorite drink nearby.\n3. Pick a fun project: it could be a visualization of your Spotify history, a quirky bot, or a small tool only you will ever use.\n4. Let go of outcomes: the point isn’t to finish — it’s to explore."
+  },
+  {
+    "objectID": "posts/002_test_test/test_test.html#closing-thoughts",
+    "href": "posts/002_test_test/test_test.html#closing-thoughts",
+    "title": "Vibe Coding: Finding Flow in Software Development",
+    "section": "",
+    "text": "Coding doesn’t always have to be serious. Sometimes the best way to unlock creativity, reduce stress, and rediscover joy in programming is to let yourself vibe with the process.\nSo next time you sit down to write code, try setting aside the pressure of productivity. Put on some music, open a blank file, and let the vibes lead you — you might be surprised by what you create."
   },
   {
     "objectID": "posts/000_test_post/index.html",
