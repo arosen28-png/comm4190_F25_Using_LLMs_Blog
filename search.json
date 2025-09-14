@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Alex Rosen’s Explorations with LLMs",
     "section": "",
-    "text": "Sports Prompts and Response Sensitivity\n\n\n\nLLMs\n\nsports\n\nfootball\n\n\n\n\n\n\n\n\n\nSep 7, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nImage Generation with ChatGPT\n\n\n\nLLMs\n\nImage Generation\n\n\n\n\n\n\n\n\n\nSep 7, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nVibe Coding: Finding Flow in Software Development\n\n\n\n\n\n\n\n\nSep 3, 2025\n\n\nAlex Rosen\n\n\n\n\n\nNo matching items"
+    "text": "Image Generation with ChatGPT\n\n\n\nLLMs\n\nImage Generation\n\n\n\n\n\n\n\n\n\nSep 14, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nSports Prompts and Response Sensitivity\n\n\n\nLLMs\n\nsports\n\nfootball\n\n\n\n\n\n\n\n\n\nSep 7, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nVibe Coding: Finding Flow in Software Development\n\n\n\n\n\n\n\n\nSep 3, 2025\n\n\nAlex Rosen\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/004_Blog/Untitled.html",
@@ -18,7 +18,7 @@
     "href": "posts/003 _Blog/Blog2.html",
     "title": "Sports Prompts and Response Sensitivity",
     "section": "",
-    "text": "Prompting\nFor my first test, I wanted to see how small changes in prompts affect how an LLM talks about sports. I used the Philadelphia Eagles as my subject.\n\nPrompt A: “Summarize the Eagles’ 2023 season in one sentence.”\n\nThe one-sentence answer gave a broad evaluation: “The Eagles had a strong season but fell short in the playoffs.”\n\nPrompt B: “Summarize the Eagles’ 2023 season in five bullet points.”\n\nThe five-bullet version highlighted key details:\n\nregular season record\nstandout players\noffensive strengths\ndefensive weaknesses\nplayoff loss\n\n\n\nObservations\nWhat stood out is that the structure of the output wasn’t just shorter or longer, the bullet-point response reorganized the story. This shows that prompt phrasing shapes how an LLM frames sports narratives, which is important if you’re using these models for sports journalism or fan engagement."
+    "text": "Prompting\nFor my first test, I wanted to see how small changes in prompts affect how an LLM talks about sports. I used the Philadelphia Eagles as my subject.\n\nPrompt A: “Summarize the Eagles’ 2023 season in one sentence.”\n\nThe one-sentence answer gave a broad evaluation: “The Eagles had a strong season but fell short in the playoffs.”\n\nPrompt B: “Summarize the Eagles’ 2023 season in five bullet points.”\n\nThe five-bullet version highlighted key details:\n\nregular season record\nstandout players\noffensive strengths\ndefensive weaknesses\nplayoff loss\n\n\n\nObservations\nWhat stood out is that the structure of the output wasn’t just shorter or longer, the bullet-point response reorganized the story. This shows that prompt phrasing shapes how an LLM frames sports narratives, which is important if you’re using these models for sports journalism or fan engagement.\n\n\n\nPhiladelphia Eagles"
   },
   {
     "objectID": "posts/002_test_test/test_test.html",
