@@ -32,9 +32,6 @@ format:
     css: styles.css
     df-print: paged
 
-# Image lightbox on click
-filters:
-  - lightbox
 
 # Useful site-wide variables
 metadata:
