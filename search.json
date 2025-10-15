@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Alex Rosen’s Explorations with LLMs",
     "section": "",
-    "text": "Cleaning Up Messy Notes with GPT\n\n\n\nllms\n\nstudying\n\n\n\n\n\n\n\n\n\nSep 19, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nUsing LLMs to Write Emails\n\n\n\nllms\n\ncommunication\n\nuniversity\n\n\n\n\n\n\n\n\n\nSep 17, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nImage Generation with ChatGPT\n\n\n\nLLMs\n\nImage Generation\n\n\n\n\n\n\n\n\n\nSep 14, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nSports Prompts and Response Sensitivity\n\n\n\nLLMs\n\nsports\n\nfootball\n\n\n\n\n\n\n\n\n\nSep 7, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nVibe Coding: Finding Flow in Software Development\n\n\n\n\n\n\n\n\nSep 3, 2025\n\n\nAlex Rosen\n\n\n\n\n\nNo matching items"
+    "text": "Testing AI for Business Brainstorms\n\n\n\nllms\n\nbusiness\n\nstudying\n\n\n\n\n\n\n\n\n\nOct 15, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nCleaning Up Messy Notes with GPT\n\n\n\nllms\n\nstudying\n\n\n\n\n\n\n\n\n\nSep 19, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nUsing LLMs to Write Emails\n\n\n\nllms\n\ncommunication\n\nuniversity\n\n\n\n\n\n\n\n\n\nSep 17, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nImage Generation with ChatGPT\n\n\n\nLLMs\n\nImage Generation\n\n\n\n\n\n\n\n\n\nSep 14, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nSports Prompts and Response Sensitivity\n\n\n\nLLMs\n\nsports\n\nfootball\n\n\n\n\n\n\n\n\n\nSep 7, 2025\n\n\nAlex Rosen\n\n\n\n\n\n\n\n\n\n\n\n\nVibe Coding: Finding Flow in Software Development\n\n\n\n\n\n\n\n\nSep 3, 2025\n\n\nAlex Rosen\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/004_Blog/Untitled.html",
@@ -75,5 +75,12 @@
     "title": "Vibe Coding: Finding Flow in Software Development",
     "section": "",
     "text": "Coding doesn’t always have to be serious. Sometimes the best way to unlock creativity, reduce stress, and rediscover joy in programming is to let yourself vibe with the process.\nSo next time you sit down to write code, try setting aside the pressure of productivity. Put on some music, open a blank file, and let the vibes lead you — you might be surprised by what you create."
+  },
+  {
+    "objectID": "posts/007_blog/Untitled.html",
+    "href": "posts/007_blog/Untitled.html",
+    "title": "Testing AI for Business Brainstorms",
+    "section": "",
+    "text": "AI as a Business Partner\n\n\nThe Image\n\n\n\n\nAI Brainstorm Graphic\n\n\n\nThe Copy Paste\n\nHere’s an example of GPT-5 helping me generate and refine startup ideas during a study session.\n\n\nThe Experiment\nIn a group project for my business class, we had to come up with a new product idea and outline a marketing plan.\nI wondered: could GPT help us think like entrepreneurs, not just write like one?\nSo I asked:\n“Generate 5 startup ideas for college students that solve everyday problems, then outline target customers and pricing strategies.”\nThe result wasn’t perfect — some ideas were unrealistic — but others felt shockingly plausible. It even categorized them by business model and market segment.\n\n\nThe Prompt and Response\n\nPrompt\n\n&lt;blockquote&gt;\n    Generate 5 startup ideas for college students that solve everyday problems. For each, describe the target customer, value proposition, and basic pricing model.\n&lt;/blockquote&gt;\n\nResponse\n\n&lt;blockquote&gt;\n    1. **DormChef** – A meal-prep subscription for students with limited kitchen space. &lt;br&gt;\n    2. **TextSwap** – Peer-to-peer textbook rental app. &lt;br&gt;\n    3. **CampusConnect** – Local networking platform for side hustles and projects. &lt;br&gt;\n    4. **StudyBuddy AI** – Personalized study partner using adaptive learning. &lt;br&gt;\n    5. **GreenMove** – Shared transport service for moving between dorms sustainably.\n&lt;/blockquote&gt;\n\n\n\nReflection\n\nThis test showed me how AI can support business ideation — not by replacing creativity, but by accelerating it.\nGPT acts like a brainstorming partner that throws ideas at the wall fast, letting you decide which ones to keep.\nIt’s not about trusting the output blindly, it’s about using it to think faster and broader."
   }
 ]
