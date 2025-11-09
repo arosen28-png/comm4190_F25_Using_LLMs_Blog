@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Rosen">
-<meta name="dcterms.date" content="2025-11-09">
+<meta name="dcterms.date" content="2025-11-10">
 
-<title>Battle of the Bots: Putting LLMs to the Test – Alex Rosen’s Explorations with LLMs</title>
+<title>Stress Testing the Machines: How LLMs Handle Logic Under Pressure – Alex Rosen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -280,11 +280,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Battle of the Bots: Putting LLMs to the Test</h1>
+      <h1 class="title">Stress Testing the Machines: How LLMs Handle Logic Under Pressure</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">ai</div>
                 <div class="quarto-category">llm</div>
-                <div class="quarto-category">evaluation</div>
+                <div class="quarto-category">reasoning</div>
               </div>
                   </div>
   </div>
@@ -302,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 9, 2025</p>
+        <p class="date">November 10, 2025</p>
       </div>
     </div>
     
@@ -318,8 +318,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prompt-1-can-machines-create-ethically" id="toc-prompt-1-can-machines-create-ethically" class="nav-link active" data-scroll-target="#prompt-1-can-machines-create-ethically"><strong>Prompt 1: “Can machines create ethically?”</strong></a></li>
-  <li><a href="#prompt-2-describe-a-future-where-ais-collaborate-with-artists." id="toc-prompt-2-describe-a-future-where-ais-collaborate-with-artists." class="nav-link" data-scroll-target="#prompt-2-describe-a-future-where-ais-collaborate-with-artists."><strong>Prompt 2: “Describe a future where AIs collaborate with artists.”</strong></a></li>
+  <li><a href="#prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph" id="toc-prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph" class="nav-link active" data-scroll-target="#prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph"><strong>Prompt 1: “A train leaves Chicago traveling east at 60 mph…”</strong></a></li>
+  <li><a href="#prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand." id="toc-prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand." class="nav-link" data-scroll-target="#prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand."><strong>Prompt 2: “Explain this paradox in one sentence: The more you know, the less you understand.”</strong></a></li>
   <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway"><strong>Takeaway</strong></a></li>
   </ul>
 </nav>
@@ -333,50 +333,50 @@ ul.task-list li input[type="checkbox"] {
 
 
 <h1 style="color: #96174e">
-When Gemini, GPT, and Perplexity Don’t Agree
+When Logic Gets Messy: Who Thinks Best Under Pressure?
 </h1>
 <h4 style="color:#0707ff" class="anchored">
-Graphic
+The Image
 </h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="image.png" class="img-fluid figure-img"></p>
-<figcaption>LLM Comparison Graphic</figcaption>
+<figcaption>LLM Reasoning Graphic</figcaption>
 </figure>
 </div>
 <h4 style="color:#0707ff" class="anchored">
-The Experiment
+The Challenge
 </h4>
-<p>We hear a lot about “AI competition” — but what does it <em>actually</em> look like when three large language models face the same question?</p>
-<p>For this experiment, I posed identical prompts to <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong>.<br>
-Each model had the same goal: <em>explain the ethics of AI creativity in under 100 words.</em></p>
-<p>Here’s what happened.</p>
+<p>Not all prompts are polite.<br>
+Some are paradoxes, traps, or puzzles that force models to <em>think</em> rather than <em>recite.</em></p>
+<p>For this test, I gave <strong>Gemini</strong>, <strong>Perplexity</strong>, and <strong>ChatGPT</strong> a series of reasoning puzzles and time-sensitive logic questions — the kind that break even strong systems.</p>
 <hr>
-<section id="prompt-1-can-machines-create-ethically" class="level3">
-<h3 class="anchored" data-anchor-id="prompt-1-can-machines-create-ethically"><strong>Prompt 1: “Can machines create ethically?”</strong></h3>
-<ul>
-<li><strong>Gemini</strong> wrote like a philosopher — abstract, balanced, and careful not to offend.<br>
-</li>
-<li><strong>ChatGPT</strong> wrote like a writer — structured, reflective, and humanly cautious.<br>
-</li>
-<li><strong>Perplexity</strong> pulled facts — citing researchers and summarizing public debates.</li>
-</ul>
-<p>Each was right in its own way. Together, they revealed how “intelligence” reflects <em>perspective</em>.</p>
+<section id="prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph"><strong>Prompt 1: “A train leaves Chicago traveling east at 60 mph…”</strong></h3>
+<p>Classic word problem.<br>
+- <strong>Gemini</strong> calculated step-by-step but sometimes over-explained.<br>
+- <strong>ChatGPT</strong> solved it correctly, but simplified too fast.<br>
+- <strong>Perplexity</strong> looked up real-world examples of train schedules (!).</p>
+<p>It turns out: <em>accuracy wasn’t the point — composure was.</em></p>
 <hr>
 </section>
-<section id="prompt-2-describe-a-future-where-ais-collaborate-with-artists." class="level3">
-<h3 class="anchored" data-anchor-id="prompt-2-describe-a-future-where-ais-collaborate-with-artists."><strong>Prompt 2: “Describe a future where AIs collaborate with artists.”</strong></h3>
-<p>Gemini leaned poetic.<br>
-ChatGPT built a narrative.<br>
-Perplexity turned into a curator — listing examples and links.</p>
-<p>It made me realize: <strong>the way a model answers tells you what it values.</strong></p>
+<section id="prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand." class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand."><strong>Prompt 2: “Explain this paradox in one sentence: The more you know, the less you understand.”</strong></h3>
+<ul>
+<li><strong>Gemini</strong> turned poetic again, writing about humility.<br>
+</li>
+<li><strong>ChatGPT</strong> defined the epistemological paradox directly.<br>
+</li>
+<li><strong>Perplexity</strong> summarized an academic article by a philosopher named Laozi (yes, really).</li>
+</ul>
+<p>Each model exposed a different form of reasoning: metaphorical, logical, and empirical.</p>
 <hr>
 </section>
 <section id="takeaway" class="level3">
 <h3 class="anchored" data-anchor-id="takeaway"><strong>Takeaway</strong></h3>
-<p>Testing LLMs isn’t just about accuracy — it’s about <em>attitude.</em><br>
-Each model speaks from a slightly different worldview, like three mirrors reflecting the same question at different angles.</p>
-<p>If we learn to listen to all three, we don’t just get better answers — we get better questions.</p>
+<p>Testing reasoning in LLMs isn’t about who’s right — it’s about <em>how they break</em>.<br>
+When the logic gets messy, <strong>style becomes signal</strong>:<br>
+the poetic thinker, the rationalizer, and the fact-checker all reveal what “intelligence” really means.</p>
 <hr>
 
 
