@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alex Rosen">
+<meta name="dcterms.date" content="2025-11-09">
 
-<title>Alex Rosen’s Explorations with LLMs – Alex Rosen’s Explorations with LLMs</title>
+<title>Battle of the Bots: Putting LLMs to the Test – Alex Rosen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-2aed03bb80506ace88ec0683eb1deae2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-2aed03bb80506ace88ec0683eb1deae2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,68 +73,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -306,9 +248,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Alex Rosen’s Explorations with LLMs</span>
     </a>
   </div>
@@ -319,11 +261,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -337,371 +279,110 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Alex Rosen’s Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Battle of the Bots: Putting LLMs to the Test</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">ai</div>
+                <div class="quarto-category">llm</div>
+                <div class="quarto-category">evaluation</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alex Rosen </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 9, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YnVzaW5lc3M=">business <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tbXVuaWNhdGlvbg==">communication <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3JlYXRpdml0eQ==">creativity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXZhbHVhdGlvbg==">evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm9vdGJhbGw=">football <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1hZ2UlMjBHZW5lcmF0aW9u">Image Generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxtcw==">llms <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVhZGluZw==">reading <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3BvcnRz">sports <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3R1ZHlpbmc=">studying <span class="quarto-category-count">(4)</span></div><div class="category" data-category="dW5pdmVyc2l0eQ==">university <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prompt-1-can-machines-create-ethically" id="toc-prompt-1-can-machines-create-ethically" class="nav-link active" data-scroll-target="#prompt-1-can-machines-create-ethically"><strong>Prompt 1: “Can machines create ethically?”</strong></a></li>
+  <li><a href="#prompt-2-describe-a-future-where-ais-collaborate-with-artists." id="toc-prompt-2-describe-a-future-where-ais-collaborate-with-artists." class="nav-link" data-scroll-target="#prompt-2-describe-a-future-where-ais-collaborate-with-artists."><strong>Prompt 2: “Describe a future where AIs collaborate with artists.”</strong></a></li>
+  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway"><strong>Takeaway</strong></a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="YWklMkNsbG0lMkNldmFsdWF0aW9u" data-listing-date-sort="1762646400000" data-listing-file-modified-sort="1762704158596" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="207">
-<div class="thumbnail"><a href="./posts/011_blog/Untitled.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/011_blog/image.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/011_blog/Untitled.html" class="no-external">Battle of the Bots: Putting LLMs to the Test</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxt'); return false;">llm</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXZhbHVhdGlvbg=='); return false;">evaluation</div>
-
+<h1 style="color: #96174e">
+When Gemini, GPT, and Perplexity Don’t Agree
+</h1>
+<h4 style="color:#0707ff" class="anchored">
+The Image
+</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image.png" class="img-fluid figure-img"></p>
+<figcaption>LLM Comparison Graphic</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/011_blog/Untitled.html" class="no-external">
-We hear a lot about “AI competition” — but what does it <em>actually</em> look like when three large language models face the same question?
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/011_blog/Untitled.html" class="no-external">
-<div class="listing-date">
-Nov 9, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="1762128000000" data-listing-file-modified-sort="1762704158594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400">
-<div class="thumbnail"><a href="./posts/009_blog/post009.html" class="no-external">
+<h4 style="color:#0707ff" class="anchored">
+The Experiment
+</h4>
+<p>We hear a lot about “AI competition” — but what does it <em>actually</em> look like when three large language models face the same question?</p>
+<p>For this experiment, I posed identical prompts to <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong>.<br>
+Each model had the same goal: <em>explain the ethics of AI creativity in under 100 words.</em></p>
+<p>Here’s what happened.</p>
+<hr>
+<section id="prompt-1-can-machines-create-ethically" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1-can-machines-create-ethically"><strong>Prompt 1: “Can machines create ethically?”</strong></h3>
+<ul>
+<li><strong>Gemini</strong> wrote like a philosopher — abstract, balanced, and careful not to offend.<br>
+</li>
+<li><strong>ChatGPT</strong> wrote like a writer — structured, reflective, and humanly cautious.<br>
+</li>
+<li><strong>Perplexity</strong> pulled facts — citing researchers and summarizing public debates.</li>
+</ul>
+<p>Each was right in its own way. Together, they revealed how “intelligence” reflects <em>perspective</em>.</p>
+<hr>
+</section>
+<section id="prompt-2-describe-a-future-where-ais-collaborate-with-artists." class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2-describe-a-future-where-ais-collaborate-with-artists."><strong>Prompt 2: “Describe a future where AIs collaborate with artists.”</strong></h3>
+<p>Gemini leaned poetic.<br>
+ChatGPT built a narrative.<br>
+Perplexity turned into a curator — listing examples and links.</p>
+<p>It made me realize: <strong>the way a model answers tells you what it values.</strong></p>
+<hr>
+</section>
+<section id="takeaway" class="level3">
+<h3 class="anchored" data-anchor-id="takeaway"><strong>Takeaway</strong></h3>
+<p>Testing LLMs isn’t just about accuracy — it’s about <em>attitude.</em><br>
+Each model speaks from a slightly different worldview, like three mirrors reflecting the same question at different angles.</p>
+<p>If we learn to listen to all three, we don’t just get better answers — we get better questions.</p>
+<hr>
 
-<p class="card-img-top"><img src="posts/009_blog/book.jpg"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/009_blog/post009.html" class="no-external">Thinking About Thinking: The Next Layers of Intelligence</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHlpbmc='); return false;">studying</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVhZGluZw=='); return false;">reading</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/009_blog/post009.html" class="no-external">
-In <em>A Brief History of Intelligence</em>, Max Bennett continues his evolutionary map of the mind — moving from simple <em>reactive</em> intelligence to systems capable of <strong>prediction</strong> and <strong>sim…</strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/009_blog/post009.html" class="no-external">
-<div class="listing-date">
-Nov 3, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YWklMkNwcm9tcHRpbmclMkNjcmVhdGl2aXR5" data-listing-date-sort="1762128000000" data-listing-file-modified-sort="1762704158594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="386">
-<div class="thumbnail"><a href="./posts/010_blog/post10.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/010_blog/prompting.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/010_blog/post10.html" class="no-external">Thinking About Thinking: The Art of Prompt Framing</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlYXRpdml0eQ=='); return false;">creativity</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/010_blog/post10.html" class="no-external">
-When we talk about AI “prompting,” we usually mean typing an instruction and waiting for a response.<br>
-But if we zoom out, prompting is something much older — it’s the art of <strong>a…</strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/010_blog/post10.html" class="no-external">
-<div class="listing-date">
-Nov 3, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="1760486400000" data-listing-file-modified-sort="1762704158594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
-<div class="thumbnail"><a href="./posts/008_blog/post008.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/008_blog/book.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/008_blog/post008.html" class="no-external">Thinking About Thinking: Early Lessons from A Brief History of Intelligence</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHlpbmc='); return false;">studying</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVhZGluZw=='); return false;">reading</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/008_blog/post008.html" class="no-external">
-Here’s what stood out to me from the first few chapters of Max Bennett’s <em>A Brief History of Intelligence</em> — especially his breakdown of how intelligence evolved in stages.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/008_blog/post008.html" class="no-external">
-<div class="listing-date">
-Oct 15, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="bGxtcyUyQ2J1c2luZXNzJTJDc3R1ZHlpbmc=" data-listing-date-sort="1760486400000" data-listing-file-modified-sort="1762704158593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
-<div class="thumbnail"><a href="./posts/007_blog/post007.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/007_blog/business.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/007_blog/post007.html" class="no-external">Testing AI for Business Brainstorms</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YnVzaW5lc3M='); return false;">business</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHlpbmc='); return false;">studying</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/007_blog/post007.html" class="no-external">
-Here’s an example of GPT-5 helping me generate and refine startup ideas during a study session.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/007_blog/post007.html" class="no-external">
-<div class="listing-date">
-Oct 15, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="bGxtcyUyQ3N0dWR5aW5n" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1762704158593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
-<div class="thumbnail"><a href="./posts/006_Blog/post006.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/006_Blog/note.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_Blog/post006.html" class="no-external">Cleaning Up Messy Notes with GPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHlpbmc='); return false;">studying</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/006_Blog/post006.html" class="no-external">
-Here’s an example of ChatGPT rewriting messy lecture notes
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_Blog/post006.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="bGxtcyUyQ2NvbW11bmljYXRpb24lMkN1bml2ZXJzaXR5" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1762704158583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="475">
-<div class="thumbnail"><a href="./posts/005_Blog/post005.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_Blog/email.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_Blog/post005.html" class="no-external">Using LLMs to Write Emails</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tbXVuaWNhdGlvbg=='); return false;">communication</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dW5pdmVyc2l0eQ=='); return false;">university</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_Blog/post005.html" class="no-external">
-Here’s a short example of ChatGPT writing an email
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_Blog/post005.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="TExNcyUyQ0ltYWdlJTIwR2VuZXJhdGlvbg==" data-listing-date-sort="1757808000000" data-listing-file-modified-sort="1762704158578" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
-<div class="thumbnail"><a href="./posts/004_Blog/post004.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_Blog/cat1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_Blog/post004.html" class="no-external">Image Generation with ChatGPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW1hZ2UlMjBHZW5lcmF0aW9u'); return false;">Image Generation</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_Blog/post004.html" class="no-external">
-For this experiment, I tested how an LLM with image-generation can create different visuals from slightly different prompts.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_Blog/post004.html" class="no-external">
-<div class="listing-date">
-Sep 14, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="TExNcyUyQ3Nwb3J0cyUyQ2Zvb3RiYWxs" data-listing-date-sort="1757203200000" data-listing-file-modified-sort="1762704158563" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<div class="thumbnail"><a href="./posts/003 _Blog/Blog2.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003 _Blog/eagles.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003 _Blog/Blog2.html" class="no-external">Sports Prompts and Response Sensitivity</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c3BvcnRz'); return false;">sports</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zm9vdGJhbGw='); return false;">football</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003 _Blog/Blog2.html" class="no-external">
-For my first test, I wanted to see how small changes in prompts affect how an LLM talks about sports. I used the Philadelphia Eagles as my subject.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003 _Blog/Blog2.html" class="no-external">
-<div class="listing-date">
-Sep 7, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1762704158563" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="380">
-<div class="thumbnail"><a href="./posts/002_test_test/test_test.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_test_test/test_test.html" class="no-external">Vibe Coding: Finding Flow in Software Development</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/002_test_test/test_test.html" class="no-external">
-When most people think about programming, they picture solving technical problems or shipping features. But there’s another side to coding — one that feels less like work…<em></em><strong></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_test_test/test_test.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Alex Rosen
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1133,5 +814,5 @@ Alex Rosen
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
