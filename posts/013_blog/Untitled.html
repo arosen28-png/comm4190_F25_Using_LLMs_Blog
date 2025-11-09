@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Rosen">
-<meta name="dcterms.date" content="2025-11-10">
+<meta name="dcterms.date" content="2025-11-03">
 
-<title>Stress Testing the Machines: How LLMs Handle Logic Under Pressure – Alex Rosen’s Explorations with LLMs</title>
+<title>AI Showdown: When LLMs Call the Game – Alex Rosen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -280,11 +280,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Stress Testing the Machines: How LLMs Handle Logic Under Pressure</h1>
+      <h1 class="title">AI Showdown: When LLMs Call the Game</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">ai</div>
                 <div class="quarto-category">llm</div>
-                <div class="quarto-category">reasoning</div>
+                <div class="quarto-category">sports</div>
               </div>
                   </div>
   </div>
@@ -302,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 10, 2025</p>
+        <p class="date">November 3, 2025</p>
       </div>
     </div>
     
@@ -313,16 +313,8 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph" id="toc-prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph" class="nav-link active" data-scroll-target="#prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph"><strong>Prompt 1: “A train leaves Chicago traveling east at 60 mph…”</strong></a></li>
-  <li><a href="#prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand." id="toc-prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand." class="nav-link" data-scroll-target="#prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand."><strong>Prompt 2: “Explain this paradox in one sentence: The more you know, the less you understand.”</strong></a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway"><strong>Takeaway</strong></a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -332,55 +324,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<h1 style="color: #96174e">
-When Logic Gets Messy: Who Thinks Best Under Pressure?
-</h1>
-<h4 style="color:#0707ff" class="anchored">
-Pressure
-</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img"></p>
-<figcaption>LLM Reasoning Graphic</figcaption>
-</figure>
-</div>
-<h4 style="color:#0707ff" class="anchored">
-The Challenge
-</h4>
-<p>Not all prompts are polite.<br>
-Some are paradoxes, traps, or puzzles that force models to <em>think</em> rather than <em>recite.</em></p>
-<p>For this test, I gave <strong>Gemini</strong>, <strong>Perplexity</strong>, and <strong>ChatGPT</strong> a series of reasoning puzzles and time-sensitive logic questions — the kind that break even strong systems.</p>
-<hr>
-<section id="prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph" class="level3">
-<h3 class="anchored" data-anchor-id="prompt-1-a-train-leaves-chicago-traveling-east-at-60-mph"><strong>Prompt 1: “A train leaves Chicago traveling east at 60 mph…”</strong></h3>
-<p>Classic word problem.<br>
-- <strong>Gemini</strong> calculated step-by-step but sometimes over-explained.<br>
-- <strong>ChatGPT</strong> solved it correctly, but simplified too fast.<br>
-- <strong>Perplexity</strong> looked up real-world examples of train schedules (!).</p>
-<p>It turns out: <em>accuracy wasn’t the point — composure was.</em></p>
-<hr>
-</section>
-<section id="prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand." class="level3">
-<h3 class="anchored" data-anchor-id="prompt-2-explain-this-paradox-in-one-sentence-the-more-you-know-the-less-you-understand."><strong>Prompt 2: “Explain this paradox in one sentence: The more you know, the less you understand.”</strong></h3>
-<ul>
-<li><strong>Gemini</strong> turned poetic again, writing about humility.<br>
-</li>
-<li><strong>ChatGPT</strong> defined the epistemological paradox directly.<br>
-</li>
-<li><strong>Perplexity</strong> summarized an academic article by a philosopher named Laozi (yes, really).</li>
-</ul>
-<p>Each model exposed a different form of reasoning: metaphorical, logical, and empirical.</p>
-<hr>
-</section>
-<section id="takeaway" class="level3">
-<h3 class="anchored" data-anchor-id="takeaway"><strong>Takeaway</strong></h3>
-<p>Testing reasoning in LLMs isn’t about who’s right — it’s about <em>how they break</em>.<br>
-When the logic gets messy, <strong>style becomes signal</strong>:<br>
-the poetic thinker, the rationalizer, and the fact-checker all reveal what “intelligence” really means.</p>
-<hr>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
