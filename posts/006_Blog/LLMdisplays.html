@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Rosen">
-<meta name="dcterms.date" content="2025-11-03">
+<meta name="dcterms.date" content="2025-09-19">
 
-<title>AI Showdown: When LLMs Call the Game – Alex Rosen’s Explorations with LLMs</title>
+<title>Cleaning Up Messy Notes with GPT – Alex Rosen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d6a2ae2cb249da1580f0a11f71b8f854.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -248,8 +248,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Alex Rosen’s Explorations with LLMs</span>
     </a>
@@ -280,11 +278,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">AI Showdown: When LLMs Call the Game</h1>
+      <h1 class="title">Cleaning Up Messy Notes with GPT</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">ai</div>
-                <div class="quarto-category">llm</div>
-                <div class="quarto-category">sports</div>
+                <div class="quarto-category">llms</div>
+                <div class="quarto-category">studying</div>
               </div>
                   </div>
   </div>
@@ -302,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 3, 2025</p>
+        <p class="date">September 19, 2025</p>
       </div>
     </div>
     
@@ -313,8 +310,14 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-organized-notes" id="toc-the-organized-notes" class="nav-link active" data-scroll-target="#the-organized-notes"><strong>The Organized Notes</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -324,8 +327,52 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<h1 style="color: #96174e">
+Displaying LLM Outputs
+</h1>
+<h4 style="color:#0707ff" class="anchored">
+The Image
+</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="note.png" class="img-fluid figure-img"></p>
+<figcaption>Sample output</figcaption>
+</figure>
+</div>
+<h4 style="color:#0707ff" class="anchored">
+The Copy Paste
+</h4>
+<p>Here’s an example of ChatGPT rewriting messy lecture notes</p>
+<hr>
+<section id="the-organized-notes" class="level3">
+<h3 class="anchored" data-anchor-id="the-organized-notes"><strong>The Organized Notes</strong></h3>
+<p>In class this week my notes came out really messy. Lots of half-sentences and random words. I wanted to see if GPT-5 could make them clearer, so I asked:</p>
+<p><strong>“Rewrite these notes into a clean bullet point list.”</strong></p>
+<p>It worked well — the output grouped ideas into <em>Definitions, Formulas,</em> and <em>Examples.</em> It was much easier to study from than my original scribbles.</p>
+<hr>
+<h1 style="color: #96174e">
+Combination of both!
+</h1>
+<strong>Prompt</strong>
+<div style="background-color: #f8f8f8; padding: 10px; border-radius: 8px;">
+<pre><code>&lt;blockquote&gt;
+    Rewrite my messy class notes into a clear bullet point list
+&lt;/blockquote&gt;</code></pre>
+</div>
+<strong>Response</strong>
+<div style="background-color: #f0f8ff; padding: 10px; border-radius: 8px;">
+<pre><code>&lt;blockquote&gt;
+    Sure! I’ve cleaned them up and organized them into sections.
+&lt;/blockquote&gt;</code></pre>
+</div>
+<hr>
+<h1 style="color: #96174e">
+Reflection
+</h1>
+<p>This showed me how useful GPT can be for <strong>studying</strong>. It doesn’t just fix grammar — it makes notes more structured and organized. I’d still double-check details, but as a study helper it really saves time.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

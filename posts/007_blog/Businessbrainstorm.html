@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Rosen">
-<meta name="dcterms.date" content="2025-09-19">
+<meta name="dcterms.date" content="2025-10-15">
 
-<title>Cleaning Up Messy Notes with GPT – Alex Rosen’s Explorations with LLMs</title>
+<title>Testing AI for Business Brainstorms – Alex Rosen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d6a2ae2cb249da1580f0a11f71b8f854.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -248,8 +248,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Alex Rosen’s Explorations with LLMs</span>
     </a>
@@ -280,9 +278,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Cleaning Up Messy Notes with GPT</h1>
+      <h1 class="title">Testing AI for Business Brainstorms</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">llms</div>
+                <div class="quarto-category">business</div>
                 <div class="quarto-category">studying</div>
               </div>
                   </div>
@@ -301,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 19, 2025</p>
+        <p class="date">October 15, 2025</p>
       </div>
     </div>
     
@@ -317,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-organized-notes" id="toc-the-organized-notes" class="nav-link active" data-scroll-target="#the-organized-notes"><strong>The Organized Notes</strong></a></li>
+  <li><a href="#the-experiment" id="toc-the-experiment" class="nav-link active" data-scroll-target="#the-experiment"><strong>The Experiment</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -330,48 +329,59 @@ ul.task-list li input[type="checkbox"] {
 
 
 <h1 style="color: #96174e">
-Displaying LLM Outputs
+AI as a Business Partner
 </h1>
 <h4 style="color:#0707ff" class="anchored">
 The Image
 </h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="note.png" class="img-fluid figure-img"></p>
-<figcaption>Sample output</figcaption>
+<p><img src="business.jpg" class="img-fluid figure-img"></p>
+<figcaption>Testing AI for Business Brainstorms</figcaption>
 </figure>
 </div>
 <h4 style="color:#0707ff" class="anchored">
 The Copy Paste
 </h4>
-<p>Here’s an example of ChatGPT rewriting messy lecture notes</p>
+<p>Here’s an example of GPT-5 helping me generate and refine startup ideas during a study session.</p>
 <hr>
-<section id="the-organized-notes" class="level3">
-<h3 class="anchored" data-anchor-id="the-organized-notes"><strong>The Organized Notes</strong></h3>
-<p>In class this week my notes came out really messy. Lots of half-sentences and random words. I wanted to see if GPT-5 could make them clearer, so I asked:</p>
-<p><strong>“Rewrite these notes into a clean bullet point list.”</strong></p>
-<p>It worked well — the output grouped ideas into <em>Definitions, Formulas,</em> and <em>Examples.</em> It was much easier to study from than my original scribbles.</p>
+<section id="the-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="the-experiment"><strong>The Experiment</strong></h3>
+<p>In a group project for my business class, we had to come up with a new product idea and outline a marketing plan.<br>
+I wondered: could GPT help us <strong>think like entrepreneurs</strong>, not just write like one?</p>
+<p>So I asked:</p>
+<p><strong>“Generate 5 startup ideas for college students that solve everyday problems, then outline target customers and pricing strategies.”</strong></p>
+<p>The result wasn’t perfect — some ideas were unrealistic — but others felt <em>shockingly plausible</em>. It even categorized them by business model and market segment.</p>
 <hr>
 <h1 style="color: #96174e">
-Combination of both!
+The Prompt and Response
 </h1>
-<strong>Prompt</strong>
+Prompt
 <div style="background-color: #f8f8f8; padding: 10px; border-radius: 8px;">
-<pre><code>&lt;blockquote&gt;
-    Rewrite my messy class notes into a clear bullet point list
-&lt;/blockquote&gt;</code></pre>
+<pre><code>    Generate 5 startup ideas for college students that solve everyday problems. For each, describe the target customer, value proposition, and basic pricing model.</code></pre>
 </div>
-<strong>Response</strong>
+Response
 <div style="background-color: #f0f8ff; padding: 10px; border-radius: 8px;">
-<pre><code>&lt;blockquote&gt;
-    Sure! I’ve cleaned them up and organized them into sections.
-&lt;/blockquote&gt;</code></pre>
+<pre><code>    1. DormChef – A meal-prep subscription for students with limited kitchen space. &lt;br&gt;
+    2. TextSwap – Peer-to-peer textbook rental app. &lt;br&gt;
+    3. CampusConnect – Local networking platform for side hustles and projects. &lt;br&gt;
+    4. StudyBuddy AI – Personalized study partner using adaptive learning. &lt;br&gt;
+    5. GreenMove – Shared transport service for moving between dorms sustainably.</code></pre>
 </div>
 <hr>
 <h1 style="color: #96174e">
 Reflection
 </h1>
-<p>This showed me how useful GPT can be for <strong>studying</strong>. It doesn’t just fix grammar — it makes notes more structured and organized. I’d still double-check details, but as a study helper it really saves time.</p>
+<p>This test showed me how AI can support <strong>business ideation</strong> — not by replacing creativity, but by accelerating it.<br>
+GPT acts like a <em>brainstorming partner</em> that throws ideas at the wall fast, letting you decide which ones to keep.</p>
+<p>It’s not about trusting the output blindly, it’s about using it to <strong>think faster and broader</strong>.</p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="business.jpg" class="img-fluid figure-img"></p>
+<figcaption>Testing AI for Business Brainstorms</figcaption>
+</figure>
+</div>
 
 
 </section>

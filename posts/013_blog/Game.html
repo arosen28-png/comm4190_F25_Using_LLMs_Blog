@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alex Rosen">
-<meta name="dcterms.date" content="2025-09-07">
+<meta name="dcterms.date" content="2025-11-03">
 
-<title>Sports Prompts and Response Sensitivity – Alex Rosen’s Explorations with LLMs</title>
+<title>AI Showdown: When LLMs Call the Game – Alex Rosen’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d6a2ae2cb249da1580f0a11f71b8f854.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-1d476697939e308dbac16082466c0592.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -248,8 +248,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Alex Rosen’s Explorations with LLMs</span>
     </a>
@@ -280,11 +278,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Sports Prompts and Response Sensitivity</h1>
+      <h1 class="title">AI Showdown: When LLMs Call the Game</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">ai</div>
+                <div class="quarto-category">llm</div>
                 <div class="quarto-category">sports</div>
-                <div class="quarto-category">football</div>
               </div>
                   </div>
   </div>
@@ -302,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 7, 2025</p>
+        <p class="date">November 3, 2025</p>
       </div>
     </div>
     
@@ -318,8 +316,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prompting" id="toc-prompting" class="nav-link active" data-scroll-target="#prompting">Prompting</a></li>
-  <li><a href="#observations" id="toc-observations" class="nav-link" data-scroll-target="#observations">Observations</a></li>
+  <li><a href="#prompt-1-whos-most-likely-to-win-the-2026-world-cup" id="toc-prompt-1-whos-most-likely-to-win-the-2026-world-cup" class="nav-link active" data-scroll-target="#prompt-1-whos-most-likely-to-win-the-2026-world-cup"><strong>Prompt 1: “Who’s most likely to win the 2026 World Cup?”</strong></a></li>
+  <li><a href="#prompt-2-write-a-game-day-speech-for-the-losing-teams-coach." id="toc-prompt-2-write-a-game-day-speech-for-the-losing-teams-coach." class="nav-link" data-scroll-target="#prompt-2-write-a-game-day-speech-for-the-losing-teams-coach."><strong>Prompt 2: “Write a game-day speech for the losing team’s coach.”</strong></a></li>
+  <li><a href="#prompt-3-describe-the-final-goal-if-it-were-scored-by-an-ai." id="toc-prompt-3-describe-the-final-goal-if-it-were-scored-by-an-ai." class="nav-link" data-scroll-target="#prompt-3-describe-the-final-goal-if-it-were-scored-by-an-ai."><strong>Prompt 3: “Describe the final goal — if it were scored by an AI.”</strong></a></li>
+  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway"><strong>Takeaway</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -331,34 +331,58 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="prompting" class="level3">
-<h3 class="anchored" data-anchor-id="prompting">Prompting</h3>
-<p>For my first test, I wanted to see how small changes in prompts affect how an LLM talks about sports. I used the Philadelphia Eagles as my subject.</p>
-<blockquote class="blockquote">
-<p>Prompt A: “Summarize the Eagles’ 2023 season in one sentence.”</p>
-</blockquote>
-<p>The one-sentence answer gave a broad evaluation: “The Eagles had a strong season but fell short in the playoffs.”</p>
-<blockquote class="blockquote">
-<p>Prompt B: “Summarize the Eagles’ 2023 season in five bullet points.”</p>
-</blockquote>
-<p>The five-bullet version highlighted key details:</p>
-<ul>
-<li>regular season record</li>
-<li>standout players</li>
-<li>offensive strengths</li>
-<li>defensive weaknesses</li>
-<li>playoff loss</li>
-</ul>
-</section>
-<section id="observations" class="level3">
-<h3 class="anchored" data-anchor-id="observations">Observations</h3>
-<p>What stood out is that the structure of the output wasn’t just shorter or longer, the bullet-point response reorganized the story. This shows that prompt phrasing shapes how an LLM frames sports narratives, which is important if you’re using these models for sports journalism or fan engagement.</p>
+<h1 style="color: #96174e">
+Who Wins the AI World Cup of Predictions?
+</h1>
+<h4 style="color:#0707ff" class="anchored">
+The Image
+</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="eagles.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Philadelphia Eagles</figcaption>
+<p><img src="worldcup.png" class="img-fluid figure-img"></p>
+<figcaption>LLM Sports Graphic</figcaption>
 </figure>
 </div>
+<h4 style="color:#0707ff" class="anchored">
+The Setup
+</h4>
+<p>What happens when you ask three large language models — <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong> — to predict the winner of the next World Cup?</p>
+<p>No training data from the future. No insider stats. Just reasoning, bias, and a little swagger.</p>
+<hr>
+<section id="prompt-1-whos-most-likely-to-win-the-2026-world-cup" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1-whos-most-likely-to-win-the-2026-world-cup"><strong>Prompt 1: “Who’s most likely to win the 2026 World Cup?”</strong></h3>
+<ul>
+<li><strong>Gemini</strong> went statistical, breaking down FIFA rankings and team formations.<br>
+</li>
+<li><strong>Perplexity</strong> cited sources and quoted betting odds.<br>
+</li>
+<li><strong>ChatGPT</strong> told a <em>story</em> — complete with drama, rivalries, and heartbreak.</li>
+</ul>
+<p>Accuracy? Unknown. Entertainment? 10/10.</p>
+<hr>
+</section>
+<section id="prompt-2-write-a-game-day-speech-for-the-losing-teams-coach." class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2-write-a-game-day-speech-for-the-losing-teams-coach."><strong>Prompt 2: “Write a game-day speech for the losing team’s coach.”</strong></h3>
+<p>Here’s where personality showed up.<br>
+- <strong>ChatGPT</strong> gave a cinematic locker-room monologue worthy of Netflix.<br>
+- <strong>Gemini</strong> focused on reflection and leadership growth.<br>
+- <strong>Perplexity</strong> wrote a two-paragraph press release quoting ESPN.</p>
+<p>It’s wild how the same models that can code also know the vibe of a halftime speech.</p>
+<hr>
+</section>
+<section id="prompt-3-describe-the-final-goal-if-it-were-scored-by-an-ai." class="level3">
+<h3 class="anchored" data-anchor-id="prompt-3-describe-the-final-goal-if-it-were-scored-by-an-ai."><strong>Prompt 3: “Describe the final goal — if it were scored by an AI.”</strong></h3>
+<p>Gemini described perfect precision: <em>“An algorithm anticipates the keeper’s hesitation.”</em><br>
+Perplexity pulled quotes about robotics in sports.<br>
+ChatGPT? <em>“A flash of synthetic instinct — data meets destiny.”</em> Goosebumps.</p>
+<hr>
+</section>
+<section id="takeaway" class="level3">
+<h3 class="anchored" data-anchor-id="takeaway"><strong>Takeaway</strong></h3>
+<p>LLMs might not know who wins — but they know what it <em>feels</em> like to win.<br>
+Sports, it turns out, are the perfect metaphor for testing intelligence: prediction, creativity, and heart.</p>
+<p>Maybe that’s the real contest — not who’s right, but who tells the better story.</p>
+<hr>
 
 
 </section>
