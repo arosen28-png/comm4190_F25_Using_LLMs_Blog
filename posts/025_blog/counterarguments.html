@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -357,54 +322,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="23b5a6bd-fc0d-4aab-8239-5a24821b67bd" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h1 style<span class="op">=</span><span class="st">"color: #96174e"</span><span class="op">&gt;</span>Using LLMs to Test Counterarguments <span class="kw">in</span> Blog Writing<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>In this post, I examined how an LLM can be used to surface potential counterarguments to a blog post. When writing persuasively, it <span class="kw">is</span> easy to overlook objections that readers might <span class="cf">raise</span>.<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>Instead of using the model to strengthen my own argument directly, I asked it to adopt a skeptical perspective <span class="kw">and</span> challenge the main claim.<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h4 style<span class="op">=</span><span class="st">"color:#0707ff"</span><span class="op">&gt;</span>The Graphic<span class="op">&lt;/</span>h4<span class="op">&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>img src<span class="op">=</span><span class="st">"test.jpg"</span> alt<span class="op">=</span><span class="st">"LLM generating counterarguments to a blog claim"</span> width<span class="op">=</span><span class="st">"60%"</span><span class="op">&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;&lt;</span>em<span class="op">&gt;</span>This image will later show an argument branching into opposing viewpoints.<span class="op">&lt;/</span>em<span class="op">&gt;&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h4 style<span class="op">=</span><span class="st">"color:#0707ff"</span><span class="op">&gt;</span>Main Claim<span class="op">&lt;/</span>h4<span class="op">&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p style<span class="op">=</span><span class="st">"background-color: #f8f8f8; padding: 10px; border-radius: 8px;"</span><span class="op">&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>LLMs are effective tools <span class="cf">for</span> improving blog writing when used intentionally <span class="kw">and</span> thoughtfully.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h4 style<span class="op">=</span><span class="st">"color:#0707ff"</span><span class="op">&gt;</span>Prompt<span class="op">&lt;/</span>h4<span class="op">&gt;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div style<span class="op">=</span><span class="st">"background-color: #f8f8f8; padding: 10px; border-radius: 8px;"</span><span class="op">&gt;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>blockquote<span class="op">&gt;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>List two reasonable counterarguments a skeptical reader might <span class="cf">raise</span> against this claim.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>blockquote<span class="op">&gt;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h4 style<span class="op">=</span><span class="st">"color:#0707ff"</span><span class="op">&gt;</span>Response<span class="op">&lt;/</span>h4<span class="op">&gt;</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div style<span class="op">=</span><span class="st">"background-color: #f0f8ff; padding: 10px; border-radius: 8px;"</span><span class="op">&gt;</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>blockquote<span class="op">&gt;</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>One counterargument <span class="kw">is</span> that relying on LLMs may weaken a writer’s original voice <span class="kw">and</span> critical thinking skills over time.  </span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Another concern <span class="kw">is</span> that without careful verification, LLM<span class="op">-</span>generated suggestions could introduce inaccuracies <span class="kw">or</span> oversimplifications.</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>blockquote<span class="op">&gt;</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>The response highlighted concerns I had <span class="kw">not</span> fully addressed. It did <span class="kw">not</span> dismiss the original claim, but it exposed areas that needed clarification <span class="kw">or</span> qualification.<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>h1 style<span class="op">=</span><span class="st">"color: #96174e"</span><span class="op">&gt;</span>Reflection<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>This experiment showed that LLMs can act <span class="im">as</span> productive skeptics. By articulating counterarguments, the model helped stress<span class="op">-</span>test the strength of my reasoning.<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>For blogging, this <span class="kw">is</span> useful before publishing. Anticipating objections makes arguments more balanced <span class="kw">and</span> credible.<span class="op">&lt;/</span>p<span class="op">&gt;</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>Overall, this use case reinforced that LLMs can support critical thinking by challenging ideas rather than simply reinforcing them.<span class="op">&lt;/</span>p<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h1 style="color: #96174e">
+Using LLMs to Test Counterarguments in Blog Writing
+</h1>
+<p>
+In this post, I examined how an LLM can be used to surface potential counterarguments to a blog post. When writing persuasively, it is easy to overlook objections that readers might raise.
+</p>
+<p>
+Instead of using the model to strengthen my own argument directly, I asked it to adopt a skeptical perspective and challenge the main claim.
+</p>
+<h4 style="color:#0707ff" class="anchored">
+The Graphic
+</h4>
+<p>
+<img src="counter.png" alt="LLM generating counterarguments to a blog claim" width="60%">
+</p>
+<h4 style="color:#0707ff" class="anchored">
+Main Claim
+</h4>
+<p style="background-color: #f8f8f8; padding: 10px; border-radius: 8px;">
+LLMs are effective tools for improving blog writing when used intentionally and thoughtfully.
+</p>
+<h4 style="color:#0707ff" class="anchored">
+Prompt
+</h4>
+<div style="background-color: #f8f8f8; padding: 10px; border-radius: 8px;">
+<blockquote class="blockquote">
+List two reasonable counterarguments a skeptical reader might raise against this claim.
+</blockquote>
 </div>
+<h4 style="color:#0707ff" class="anchored">
+Response
+</h4>
+<div style="background-color: #f0f8ff; padding: 10px; border-radius: 8px;">
+<blockquote class="blockquote">
+One counterargument is that relying on LLMs may weaken a writer’s original voice and critical thinking skills over time.<br>
+Another concern is that without careful verification, LLM-generated suggestions could introduce inaccuracies or oversimplifications.
+</blockquote>
+</div>
+<p>
+The response highlighted concerns I had not fully addressed. It did not dismiss the original claim, but it exposed areas that needed clarification or qualification.
+</p>
+<h1 style="color: #96174e">
+Reflection
+</h1>
+<p>
+This experiment showed that LLMs can act as productive skeptics. By articulating counterarguments, the model helped stress-test the strength of my reasoning.
+</p>
+<p>
+For blogging, this is useful before publishing. Anticipating objections makes arguments more balanced and credible.
+</p>
+<p>
+Overall, this use case reinforced that LLMs can support critical thinking by challenging ideas rather than simply reinforcing them.
+</p>
 
 
 
