@@ -84,7 +84,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -354,7 +355,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(24)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YnVzaW5lc3M=">business <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tbXVuaWNhdGlvbg==">communication <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tcGFyaXNvbg==">comparison <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3JlYXRpdml0eQ==">creativity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3JpdGljYWwtdGhpbmtpbmc=">critical-thinking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXZhbHVhdGlvbg==">evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm9vdGJhbGw=">football <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1hZ2UlMjBHZW5lcmF0aW9u">Image Generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1hZ2UtZ2VuZXJhdGlvbg==">image-generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGVhcm5pbmc=">learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGxtcw==">llms <span class="quarto-category-count">(14)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0cw==">prompts <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVhZGluZw==">reading <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVhc29uaW5n">reasoning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV2aXNpb24=">revision <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3BvcnRz">sports <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3R1ZHlpbmc=">studying <span class="quarto-category-count">(7)</span></div><div class="category" data-category="dG9uZQ==">tone <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dW5pdmVyc2l0eQ==">university <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d3JpdGluZw==">writing <span class="quarto-category-count">(6)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(30)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmxvZ2dpbmc=">blogging <span class="quarto-category-count">(6)</span></div><div class="category" data-category="YnVzaW5lc3M=">business <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tbXVuaWNhdGlvbg==">communication <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tcGFyaXNvbg==">comparison <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3JlYXRpdml0eQ==">creativity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3JpdGljYWwtdGhpbmtpbmc=">critical-thinking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXZhbHVhdGlvbg==">evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm9vdGJhbGw=">football <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1hZ2UlMjBHZW5lcmF0aW9u">Image Generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1hZ2UtZ2VuZXJhdGlvbg==">image-generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGVhcm5pbmc=">learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGxt">llm <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGxtcw==">llms <span class="quarto-category-count">(19)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGxhbm5pbmc=">planning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0cw==">prompts <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVhZGluZw==">reading <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cmVhc29uaW5n">reasoning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV2aXNpb24=">revision <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c2ltdWxhdGlvbg==">simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3BvcnRz">sports <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3R1ZHlpbmc=">studying <span class="quarto-category-count">(7)</span></div><div class="category" data-category="dG9uZQ==">tone <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dW5pdmVyc2l0eQ==">university <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya2Zsb3dz">workflows <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d3JpdGluZw==">writing <span class="quarto-category-count">(8)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -369,7 +370,62 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ3Byb21wdHMlMkNibG9nZ2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872055" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1766119559954">
+<div class="thumbnail"><a href="./posts/031_blog/book.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/031_blog/book.html" class="no-external"></a>
+</h3>
+<div class="delink listing-description"><a href="./posts/031_blog/book.html" class="no-external">
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/031_blog/book.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bGxtcyUyQ3BsYW5uaW5nJTJDd29ya2Zsb3dz" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="229">
+<div class="thumbnail"><a href="./posts/029_blog/multistep.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/029_blog/image.png" alt="LLM breaking a project into structured steps"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/029_blog/multistep.html" class="no-external">Using LLMs to Plan Multi-Step Projects</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGxhbm5pbmc='); return false;">planning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('d29ya2Zsb3dz'); return false;">workflows</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/029_blog/multistep.html" class="no-external">
+
+In this post, I examined how an LLM can be used to plan a multi-step project. Complex projects often feel overwhelming because it is difficult to see all the steps at once.
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/029_blog/multistep.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2025
+</div>
+<div class="listing-author">
+Alex Rosen
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="bGxtcyUyQ3Byb21wdHMlMkNibG9nZ2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559945" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
 <div class="thumbnail"><a href="./posts/016_blog/Prompting.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/016_blog/read.jpeg" alt="Tone control workflow using an LLM"  class="thumbnail-image card-img"/></p>
@@ -404,7 +460,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bGxtcyUyQ3Byb21wdHMlMkNsZWFybmluZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872060" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="241">
+<div class="quarto-post image-right" data-index="3" data-categories="bGxtcyUyQ3Byb21wdHMlMkNsZWFybmluZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="241">
 <div class="thumbnail"><a href="./posts/022_blog/Followups.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/022_blog/llm.png" alt="LLM generating follow-up questions during a workflow"  class="thumbnail-image card-img"/></p>
@@ -439,7 +495,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bGxtcyUyQ3dyaXRpbmclMkNjb21wYXJpc29u" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872055" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="413">
+<div class="quarto-post image-right" data-index="4" data-categories="bGxtcyUyQ3dyaXRpbmclMkNjb21wYXJpc29u" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559945" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="413">
 <div class="thumbnail"><a href="./posts/015_blog/ClaudeXChatgpt.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/015_blog/test.jpg" alt="Comparison of GPT and Claude revision workflow"  class="thumbnail-image card-img"/></p>
@@ -474,7 +530,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="bGxtcyUyQ3dyaXRpbmclMkNyZXZpc2lvbg==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
+<div class="quarto-post image-right" data-index="5" data-categories="bGxtcyUyQ3dyaXRpbmclMkNyZXZpc2lvbg==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
 <div class="thumbnail"><a href="./posts/023_blog/blogarguments.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/023_blog/image.png" alt="LLM reviewing and highlighting weaknesses in a written argument"  class="thumbnail-image card-img"/></p>
@@ -509,7 +565,42 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="bGxtcyUyQ3dyaXRpbmclMkNjcml0aWNhbC10aGlua2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872062" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
+<div class="quarto-post image-right" data-index="6" data-categories="bGxtcyUyQ3Nwb3J0cyUyQ2FuYWx5c2lz" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="261">
+<div class="thumbnail"><a href="./posts/030_blog/sports.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/030_blog/sports.jpg" alt="LLM analyzing a sports game recap"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/030_blog/sports.html" class="no-external">Using LLMs to Analyze Sports Game Recaps</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3BvcnRz'); return false;">sports</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/030_blog/sports.html" class="no-external">
+
+In this post, I examined how an LLM can be used to analyze sports game recaps. Sports articles often focus on scores and highlights, but they can miss broader patterns or…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/030_blog/sports.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2025
+</div>
+<div class="listing-author">
+Alex Rosen
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="bGxtcyUyQ3dyaXRpbmclMkNjcml0aWNhbC10aGlua2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559952" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
 <div class="thumbnail"><a href="./posts/025_blog/counterarguments.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/025_blog/counter.png" alt="LLM generating counterarguments to a blog claim"  class="thumbnail-image card-img"/></p>
@@ -544,7 +635,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="bGxtcyUyQ3N0dWR5aW5nJTJDYmxvZ2dpbmc=" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872062" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
+<div class="quarto-post image-right" data-index="8" data-categories="bGxtcyUyQ3N0dWR5aW5nJTJDYmxvZ2dpbmc=" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559951" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="274">
 <div class="thumbnail"><a href="./posts/024_blog/lectures.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/024_blog/graphic.png" alt="Transforming academic readings into blog content using an LLM"  class="thumbnail-image card-img"/></p>
@@ -579,7 +670,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="bGxtcyUyQ3N0dWR5aW5nJTJDYmxvZ2dpbmc=" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872059" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
+<div class="quarto-post image-right" data-index="9" data-categories="bGxtcyUyQ3N0dWR5aW5nJTJDYmxvZ2dpbmc=" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
 <div class="thumbnail"><a href="./posts/019_blog/tone.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/019_blog/read.jpeg" alt="Tone control workflow using an LLM"  class="thumbnail-image card-img"/></p>
@@ -614,7 +705,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="bGxtcyUyQ3dyaXRpbmclMkNyZXZpc2lvbg==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872059" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
+<div class="quarto-post image-right" data-index="10" data-categories="bGxtcyUyQ3dyaXRpbmclMkNyZXZpc2lvbg==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="291">
 <div class="thumbnail"><a href="./posts/020_blog/drafts.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/020_blog/drafts.png" alt="Comparing multiple writing drafts generated by an LLM"  class="thumbnail-image card-img"/></p>
@@ -649,7 +740,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="bGxtcyUyQ2ltYWdlLWdlbmVyYXRpb24lMkNwcm9tcHRz" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="314">
+<div class="quarto-post image-right" data-index="11" data-categories="bGxtcyUyQ2ltYWdlLWdlbmVyYXRpb24lMkNwcm9tcHRz" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559947" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="314">
 <div class="thumbnail"><a href="./posts/017_blog/Untitled.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/017_blog/laptop.png" alt="Prompt chaining workflow for image generation"  class="thumbnail-image card-img"/></p>
@@ -684,7 +775,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="bGxtcyUyQ3dyaXRpbmclMkNibG9nZ2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872060" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
+<div class="quarto-post image-right" data-index="12" data-categories="bGxtcyUyQ3dyaXRpbmclMkNibG9nZ2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="296">
 <div class="thumbnail"><a href="./posts/021_blog/notes.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/021_blog/notes.png" alt="Expanding bullet notes into full paragraphs using an LLM"  class="thumbnail-image card-img"/></p>
@@ -719,7 +810,77 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="bGxtcyUyQ3dyaXRpbmclMkN0b25l" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766097872058" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="331">
+<div class="quarto-post image-right" data-index="13" data-categories="bGxtcyUyQ3NpbXVsYXRpb24lMkNibG9nZ2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="260">
+<div class="thumbnail"><a href="./posts/028_blog/personas.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/028_blog/image.png" alt="LLM simulating different reader personas"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/028_blog/personas.html" class="no-external">Using LLMs to Simulate Reader Personas</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2ltdWxhdGlvbg=='); return false;">simulation</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/028_blog/personas.html" class="no-external">
+
+In this post, I examined how an LLM can be used to simulate different reader personas. Instead of guessing how a post might be received, I used the model to respond as if…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/028_blog/personas.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2025
+</div>
+<div class="listing-author">
+Alex Rosen
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-categories="bGxtcyUyQ3dyaXRpbmclMkNyZXZpc2lvbg==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559952" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="thumbnail"><a href="./posts/027_blog/Untitled.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/027_blog/image.png" alt="LLM summarizing a long blog draft"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/027_blog/Untitled.html" class="no-external">Using LLMs to Summarize Long Blog Drafts</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('d3JpdGluZw=='); return false;">writing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmV2aXNpb24='); return false;">revision</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/027_blog/Untitled.html" class="no-external">
+
+In this post, I examined how an LLM can be used to summarize a long blog draft into a concise overview. When posts grow longer through revision, it can become difficult to…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/027_blog/Untitled.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2025
+</div>
+<div class="listing-author">
+Alex Rosen
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-categories="bGxtcyUyQ3dyaXRpbmclMkN0b25l" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559947" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="331">
 <div class="thumbnail"><a href="./posts/018_blog/tone.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/018_blog/tone.png" alt="Tone control workflow using an LLM"  class="thumbnail-image card-img"/></p>
@@ -754,7 +915,42 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="YWklMkNsbG0lMkNyZWFzb25pbmc=" data-listing-date-sort="1762732800000" data-listing-file-modified-sort="1766097872049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194">
+<div class="quarto-post image-right" data-index="16" data-categories="bGxtcyUyQ3dyaXRpbmclMkNibG9nZ2luZw==" data-listing-date-sort="1766016000000" data-listing-file-modified-sort="1766119559952" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="309">
+<div class="thumbnail"><a href="./posts/026_blog/Audiences.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/026_blog/image.png" alt="LLM rewriting a blog introduction for different audiences"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/026_blog/Audiences.html" class="no-external">Using LLMs to Rewrite Blog Intros for Different Audiences</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('d3JpdGluZw=='); return false;">writing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmxvZ2dpbmc='); return false;">blogging</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/026_blog/Audiences.html" class="no-external">
+
+In this post, I examined how an LLM can be used to rewrite the introduction of a blog post for different audiences. The opening of a blog is especially important, since it…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/026_blog/Audiences.html" class="no-external">
+<div class="listing-date">
+Dec 18, 2025
+</div>
+<div class="listing-author">
+Alex Rosen
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="17" data-categories="YWklMkNsbG0lMkNyZWFzb25pbmc=" data-listing-date-sort="1762732800000" data-listing-file-modified-sort="1766119559939" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194">
 <div class="thumbnail"><a href="./posts/012_blog/Stresstesting.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/012_blog/image.png"  class="thumbnail-image card-img"/></p>
@@ -789,7 +985,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="YWklMkNsbG0lMkNldmFsdWF0aW9u" data-listing-date-sort="1762646400000" data-listing-file-modified-sort="1766097872047" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
+<div class="quarto-post image-right" data-index="18" data-categories="YWklMkNsbG0lMkNldmFsdWF0aW9u" data-listing-date-sort="1762646400000" data-listing-file-modified-sort="1766119559937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
 <div class="thumbnail"><a href="./posts/011_blog/Untitled.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/011_blog/image.png"  class="thumbnail-image card-img"/></p>
@@ -823,7 +1019,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="YWklMkNsbG0lMkNzcG9ydHM=" data-listing-date-sort="1762128000000" data-listing-file-modified-sort="1766097872051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="241">
+<div class="quarto-post image-right" data-index="19" data-categories="YWklMkNsbG0lMkNzcG9ydHM=" data-listing-date-sort="1762128000000" data-listing-file-modified-sort="1766119559941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="241">
 <div class="thumbnail"><a href="./posts/013_blog/Game.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/013_blog/worldcup.png"  class="thumbnail-image card-img"/></p>
@@ -857,7 +1053,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="YWklMkNwcm9tcHRpbmclMkNjcmVhdGl2aXR5" data-listing-date-sort="1762128000000" data-listing-file-modified-sort="1766097872045" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="386">
+<div class="quarto-post image-right" data-index="20" data-categories="YWklMkNwcm9tcHRpbmclMkNjcmVhdGl2aXR5" data-listing-date-sort="1762128000000" data-listing-file-modified-sort="1766119559935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="386">
 <div class="thumbnail"><a href="./posts/010_blog/Thinkingaboutthinking.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/010_blog/prompting.jpg"  class="thumbnail-image card-img"/></p>
@@ -892,7 +1088,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="1760486400000" data-listing-file-modified-sort="1766097872044" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
+<div class="quarto-post image-right" data-index="21" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="1760486400000" data-listing-file-modified-sort="1766119559935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
 <div class="thumbnail"><a href="./posts/008_blog/booksummary.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/008_blog/book.jpg"  class="thumbnail-image card-img"/></p>
@@ -926,7 +1122,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="bGxtcyUyQ2J1c2luZXNzJTJDc3R1ZHlpbmc=" data-listing-date-sort="1760486400000" data-listing-file-modified-sort="1766097872043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
+<div class="quarto-post image-right" data-index="22" data-categories="bGxtcyUyQ2J1c2luZXNzJTJDc3R1ZHlpbmc=" data-listing-date-sort="1760486400000" data-listing-file-modified-sort="1766119559934" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="330">
 <div class="thumbnail"><a href="./posts/007_blog/Businessbrainstorm.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/007_blog/business.jpg"  class="thumbnail-image card-img"/></p>
@@ -960,7 +1156,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="bGxtcyUyQ3N0dWR5aW5n" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1766097872033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
+<div class="quarto-post image-right" data-index="23" data-categories="bGxtcyUyQ3N0dWR5aW5n" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1766119559924" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
 <div class="thumbnail"><a href="./posts/006_Blog/LLMdisplays.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/006_Blog/note.png"  class="thumbnail-image card-img"/></p>
@@ -992,7 +1188,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="bGxtcyUyQ2NvbW11bmljYXRpb24lMkN1bml2ZXJzaXR5" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1766097872029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="475">
+<div class="quarto-post image-right" data-index="24" data-categories="bGxtcyUyQ2NvbW11bmljYXRpb24lMkN1bml2ZXJzaXR5" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1766119559919" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="475">
 <div class="thumbnail"><a href="./posts/005_Blog/Writingemails.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/005_Blog/email.png"  class="thumbnail-image card-img"/></p>
@@ -1026,10 +1222,10 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="TExNcyUyQ0ltYWdlJTIwR2VuZXJhdGlvbg==" data-listing-date-sort="1757808000000" data-listing-file-modified-sort="1766097872014" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
+<div class="quarto-post image-right" data-index="25" data-categories="TExNcyUyQ0ltYWdlJTIwR2VuZXJhdGlvbg==" data-listing-date-sort="1757808000000" data-listing-file-modified-sort="1766119559905" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
 <div class="thumbnail"><a href="./posts/004_Blog/Generatingphotos.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/004_Blog/cat1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img data-src="posts/004_Blog/cat1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1058,10 +1254,10 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="NaN" data-listing-file-modified-sort="1766097872045" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="300">
+<div class="quarto-post image-right" data-index="26" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="NaN" data-listing-file-modified-sort="1766119559935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="300">
 <div class="thumbnail"><a href="./posts/009_blog/booksummary2.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/009_blog/book.jpg"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img data-src="posts/009_blog/book.jpg"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1092,10 +1288,10 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="TExNcyUyQ3Nwb3J0cyUyQ2Zvb3RiYWxs" data-listing-date-sort="1757203200000" data-listing-file-modified-sort="1766097872014" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
+<div class="quarto-post image-right" data-index="27" data-categories="TExNcyUyQ3Nwb3J0cyUyQ2Zvb3RiYWxs" data-listing-date-sort="1757203200000" data-listing-file-modified-sort="1766119559905" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
 <div class="thumbnail"><a href="./posts/003 _Blog/SportsPrompting.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/003 _Blog/eagles.jpg"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img data-src="posts/003 _Blog/eagles.jpg"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1126,7 +1322,7 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1766097872014" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="380">
+<div class="quarto-post image-right" data-index="28" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1766119559905" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="380">
 <div class="thumbnail"><a href="./posts/002_test_test/test_test.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -1151,10 +1347,10 @@ Alex Rosen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="NaN" data-listing-file-modified-sort="1766097872054" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="352">
+<div class="quarto-post image-right" data-index="29" data-categories="YWklMkNzdHVkeWluZyUyQ3JlYWRpbmc=" data-listing-date-sort="NaN" data-listing-file-modified-sort="1766119559945" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="352">
 <div class="thumbnail"><a href="./posts/014_blog/reading.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/014_blog/book.jpg"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img data-src="posts/014_blog/book.jpg"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -1187,6 +1383,9 @@ Alex Rosen
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
