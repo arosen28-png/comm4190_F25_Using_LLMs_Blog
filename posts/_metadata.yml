@@ -1,8 +1,19 @@
-# options specified here will apply to all posts in this folder
+author:
+  name: Alex Rosen
+  affiliation: University of Pennsylvania
 
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+description: >
+  Coursework and reflections on the use of large language models.
 
-# Enable banner style title blocks
-title-block-banner: true
+categories:
+  - COMM4190
+  - AI
+
+
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    code-tools: true
+    theme: cosmo
