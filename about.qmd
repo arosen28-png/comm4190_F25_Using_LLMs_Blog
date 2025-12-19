@@ -1,8 +1,8 @@
 ---
-title: About
-image: profile.jpg
+title: Alex Rosen Blogs
+image: me.jpeg
 about:
-  template: jolla
+  template: about
 ---
 
 About This Blog
