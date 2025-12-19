@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "About This Blog\nThis blog explores how large language models (LLMs) can support thinking, writing, and learning — not by replacing human judgment, but by reshaping how ideas are developed, revised, and communicated.\nMost of the posts here are short experiments. I take a familiar academic or creative task — rewriting an introduction, comparing drafts, identifying weak arguments, generating counterpoints — and test how an LLM responds when prompted intentionally. Rather than treating AI as a shortcut, I use it as a tool for reflection, revision, and audience awareness.\nA central theme of this blog is process. I’m interested in how small changes in prompts lead to meaningful differences in tone, clarity, and emphasis, and what those differences reveal about both writing and thinking. Each post focuses less on whether the AI output is “good” or “bad,” and more on what it helps surface — assumptions, alternatives, gaps, or rhetorical choices.\nThis blog was developed as part of my coursework, but it’s written for anyone curious about:\nusing LLMs responsibly in writing and studying\nunderstanding how audience and tone shape meaning\ntreating AI as a collaborative thinking partner rather than an answer machine"
   },
   {
     "objectID": "posts/018_blog/tone.html",
